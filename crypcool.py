@@ -1,8 +1,11 @@
-def base64(b):
+def b64(bchooser,b):
     import base64
-    print "encode or decode"
-    result = base64.b64decode(b)
-    print result
+    if bchooser == 1:
+        result = base64.b64decode(b)
+        print result
+    elif bchooser == 2:
+        result = base64.b64encode(b)
+        print result
 
 def caesar(a):
 
@@ -31,13 +34,14 @@ def caesar(a):
     print result
 
 def main():
-    Chooser = int(raw_input("Choose encryption: 1. Caesar; 2. BASE64"))
+    Chooser = int(raw_input("Choose encryption: 1. Caesar; 2. BASE64; "))
     if Chooser == 1:
         a = str(raw_input("caesar encoded string: "))
         caesar(a)
     elif Chooser == 2:
-        b = str(raw_input("base64 string: "))
-        base64(b)
+        bchooser = int(raw_input("decode or encode: "))
+        b = str(raw_input("Base64(or string) input: "))
+        b64(bchooser,b)
     else:
         quit()
     
