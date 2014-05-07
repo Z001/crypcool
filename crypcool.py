@@ -1,7 +1,3 @@
-
-
-print "Choose encryption: 1. Caesar; 2. BASE64"
-
 def base64(b):
     import base64
     print "encode or decode"
@@ -34,17 +30,16 @@ def caesar(a):
 
     print result
 
-
-Chooser = int(raw_input())
-if Chooser == 1:
-    a = str(raw_input("caesar encoded string: "))
-    caesar(a)
-elif Chooser == 2:
-    b = str(raw_input("base64 string: "))
-    base64(b)
+def main():
+    Chooser = int(raw_input("Choose encryption: 1. Caesar; 2. BASE64"))
+    if Chooser == 1:
+        a = str(raw_input("caesar encoded string: "))
+        caesar(a)
+    elif Chooser == 2:
+        b = str(raw_input("base64 string: "))
+        base64(b)
+    else:
+        quit()
     
-
-
-
-else:
-    quit()
+if __name__ == '__main__':
+    main()
