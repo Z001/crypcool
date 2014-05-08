@@ -36,10 +36,10 @@ def caesar(a):
 def main():
     Chooser = int(raw_input("Choose encryption: 1. Caesar; 2. BASE64; "))
     if Chooser == 1:
-        a = str(raw_input("caesar encoded string: "))
+        a = str(raw_input("String to shift: "))
         caesar(a)
     elif Chooser == 2:
-        bchooser = int(raw_input("decode or encode: "))
+        bchooser = int(raw_input("1. Decode or 2. Encode: "))
         b = str(raw_input("Base64(or string) input: "))
         b64(bchooser,b)
     else:
